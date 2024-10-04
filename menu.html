@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Restaurant Name -->
+        <h1 class="restaurant-name">Your Restaurant Name</h1>
+        
+        <h2>Welcome to Our Restaurant</h2>
+
+        <!-- Form to handle table number, customer details, and menu selection -->
+        <form id="orderForm" onsubmit="return submitOrder()">
+            <!-- Customer details -->
+            <label for="customerName">Name:</label>
+            <input type="text" id="customerName" placeholder="Enter your name" required>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" placeholder="Enter your mobile number" pattern="[0-9]{10}" required>
+
+            <!-- Table number input -->
+            <label for="tableNumber">Table Number (1-8):</label>
+            <input type="number" id="tableNumber" min="1" max="8" placeholder="Enter table number" required>
+
+            <!-- Menu items list -->
+            <h2>Menu</h2>
+            <div id="menuItems"></div>
+
+            <!-- Submit button -->
+            <button type="submit" class="order-btn">Place Order</button>
+        </form>
+
+        <!-- Confirmation message -->
+        <div id="orderConfirmation"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
